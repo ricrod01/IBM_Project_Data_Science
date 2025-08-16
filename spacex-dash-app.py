@@ -78,7 +78,7 @@ def get_pie_chart(entered_site):
         filtered_df = filtered_df.groupby('class')['class'].count()
         fig = px.pie(filtered_df,
         values = 'class',
-        names='class', 
+        names=filtered_df.index, 
         title='Total Success Launches for site ' + entered_site)
         return fig
         # return the outcomes piechart for a selected site
